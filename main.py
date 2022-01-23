@@ -1,3 +1,4 @@
+import accountInfo
 import cwCtrls
 from selenium.webdriver.common.by import By
 from selenium import webdriver
@@ -14,7 +15,7 @@ targetValue = 24776079
 driver = webdriver.Firefox()
 driver.get('https://catawiki.com')
 cwCtrls.agreeCookies(webDriver=driver)
-cwCtrls.signIn(webDriver=driver, username='eva@sooka.com')
+cwCtrls.signIn(webDriver=driver, accountInfo=accountInfo.eva)
 
 # Create empty dictionary  which will contain all further order information. The dictionary will be filled with
 # dictionaries of information about each order with the order number acting as the key for each dictionary
