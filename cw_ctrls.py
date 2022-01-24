@@ -74,3 +74,34 @@ def add_nums_titles(webDriver, info_dictionary):
         # Add order number as key to the order information dictionary, and the other information as keys to that dictionary
         info_dictionary[elemOrderNum] = {"Title text": elemTitleText, "Country": country}
 
+def get_account_info(save_to_file=True):
+    """Saves username and password dictionary for account(s) as text to 'account_details.txt or simply returns the
+    dictionary
+
+    :param save_to_file: True to save info to file on disk. False to return a dictionary
+    :type save_to_file: Boolean"""
+
+    # Loop adding as many account entries to information dictionary as user wants, later to be written to a .txt
+    # file
+    details_account = {}
+    current_acc_num = 1
+    while True:
+        # Adding account details and until user has added all accounts
+        acc_name = input("What is this accounts username or email?: ")
+        acc_pass = input("What is this accounts password?: ")
+        details_account[current_acc_num] = {"name_account: ": acc_name, "pass_account": acc_pass}
+        current_acc_num += 1
+        if input("Do you want to details for another account? Type y for yes: ").lower() != "y":
+            break
+
+        # Different return outcome depending on paramater save_to_file
+        if save_to_file:
+            # write details_account to file "account_info.txt"
+            txt_file = open("account_info.txt", "w")
+            txt_file.write(str(details_account))
+            txt_file.close()
+        elif not save_to_file:
+            return details_account
+
+
+
