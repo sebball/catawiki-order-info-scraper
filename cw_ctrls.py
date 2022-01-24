@@ -46,7 +46,7 @@ def goToOfferedLots(webDriver, page=1):
         webDriver.get(f'https://www.catawiki.com/en/seller/offered-lots/?page={page}')
 
 
-def goToSoldLots(webDriver, page=1):
+def go_sold_lots(webDriver, page=1):
     if page == 1:
         webDriver.get('https://www.catawiki.com/en/fulfilment/seller/orders?archived=false&page=1&per_page=25')
     if page > 0:
@@ -54,7 +54,7 @@ def goToSoldLots(webDriver, page=1):
 
 
 
-def addNumsTitles(webDriver, info_dictionary):
+def add_nums_titles(webDriver, info_dictionary):
     """Intended for use when on a 'Sold Lots' page. Passed a dictionary the function will add a new dictionary for each
      order on the page. The parent key of this dictionary will be the order number and the dictionary will contain one
      key 'Title text' which contains the title of the catawiki lot."""

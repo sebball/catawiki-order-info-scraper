@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/catawikiOrderScraper.iml" filepath="$PROJECT_DIR$/.idea/catawikiOrderScraper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/getcatawikiorderinfo.iml" filepath="$PROJECT_DIR$/.idea/getcatawikiorderinfo.iml" />
     </modules>
   </component>
 </project>
